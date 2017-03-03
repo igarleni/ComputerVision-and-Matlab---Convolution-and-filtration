@@ -19,7 +19,7 @@
 %Ejemplo de filtro media aplicado con diferentes formas de tratar los
 %l�mites
 filtro= fspecial('average',7);
-I=imread('peppers.png');
+I=imread('disney.png');
 Octe_0=imfilter(I,filtro,0);
 Octe_128=imfilter(I,filtro,128);
 Ocircular=imfilter(I,filtro,'circular');
@@ -44,7 +44,7 @@ figure,imshow(O)
 %gaussian: como parametros lleva el tama�o del filtro ( un numero si es
 %cuadrado 2 si es rectangular) y la desviacion estandar. Por defecto estos
 %valores son 3x3 y stddev=0.5
-I=imread('cameraman.tif');
+%I=imread('cameraman.tif');
 fgauss=fspecial('gaussian',[15 15], 1.8);
 
 figure,mesh(fgauss)
